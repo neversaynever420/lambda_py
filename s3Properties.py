@@ -4,7 +4,7 @@ from botocore.exceptions import ClientError
 
 s3 = boto3.client('s3')
 # TODO implement
-bucket = 'jiraiya-test-bucket2'
+bucket = 'Your Bucket Name'
 
 try:
   data = s3.get_bucket_encryption(Bucket=bucket)
