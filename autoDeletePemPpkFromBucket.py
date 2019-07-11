@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     user = event['detail']['userIdentity']['userName']
     if objectKey.lower().endswith(('.pem', '.ppk')):
         sns.publish(
-        TopicArn='arn:aws:sns:ap-south-1:508037994253:s3objectputNotify',
+        TopicArn='arn:aws:sns:ap-south-1:xxxxxxxxxxxxx:s3objectputNotify',
         Message="%s has uploaded a private key file %s in bucket %s" %(user, objectKey, bucketName),
         Subject='Illegal filetype upload'
     )
